@@ -9,7 +9,12 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "pip"
-    directory: "/"
+    directory: "/code"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 50
+  - package-ecosystem: "pip"
+    directory: "/extensions"
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 50
