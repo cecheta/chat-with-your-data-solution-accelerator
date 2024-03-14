@@ -40,6 +40,10 @@ def get_config():
     )
 
 
+def test():
+    print("test")
+
+
 def prepare_body_headers_with_data(request):
     request_messages = request.json["messages"]
 
