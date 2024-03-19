@@ -17,6 +17,7 @@ jobs:
       github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion != 'cancelled'
     steps:
+      - uses: actions/checkout@v4
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
@@ -35,7 +36,7 @@ jobs:
 
             return response.data.items[0]?.number ?? "";
       - name: Comment coverage
-        uses: MishaKav/pytest-coverage-comment@a1fe18e2b00c64a765568e2edb9f1706eb8fc88b
+        uses: ./.github/actions/action
         with:
           pytest-xml-coverage-path: coverage.xml
           junitxml-path: coverage-junit.xml
