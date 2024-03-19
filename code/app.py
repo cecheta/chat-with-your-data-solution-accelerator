@@ -29,6 +29,10 @@ def static_file(path):
     return app.send_static_file(path)
 
 
+def test():
+    return "Hello, World!"
+
+
 @app.route("/api/config", methods=["GET"])
 def get_config():
     # Return the configuration data as JSON
