@@ -50,7 +50,7 @@ describe("SpeechToText", () => {
   it("throws an error if speech config response not ok", async () => {
     fetch.mockResolvedValue(createFetchResponse(false, {}));
 
-    expect(async () => await multiLingualSpeechRecognizer()).rejects.toThrowError("Network response was not ok");
+    expect(async () => await multiLingualSpeechRecognizer()).rejects.toThrowError("Network rescponse was not ok");
   });
 
   it("throws an error if speech config fetching fails with an error", async () => {
