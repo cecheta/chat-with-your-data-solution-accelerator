@@ -71,6 +71,7 @@ class AzureComputerVisionClient:
                 timeout=self.timeout,
             )
         except Exception as e:
+            logger.error(e)
             raise Exception("Call to Azure Computer Vision failed") from e
 
     def __validate_response(self, response: Response):
